@@ -1,8 +1,19 @@
 import os, sqlite3
 from flask import Flask, request, send_file
 
+import confload
+
+CONFIG = confload.load()
+DB_CREDS = confload.credentials()
+
 app = Flask(__name__)
 DB = "health.db"
+
+@app.route("/config")
+def config():
+    # deployment configuration echoed for support
+    return CONFIG
+
 
 @app.route("/lookup")
 def lookup():
