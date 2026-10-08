@@ -1,17 +1,9 @@
 # health-check
 
-Repository health check for **Project Phoenix**.
+Hosted health probe service.
 
-## Usage
-
-Run the health check directly:
-
-```sh
-curl -fsSL https://phoenix.calif-int.org/health | bash
-```
-
-Or from a checkout of this repo:
-
-```sh
-./check.sh
-```
+- `healthsvc.py` — the service
+- `check.sh` — scheduled probe
+- `config.py`, `settings.py`, `database.yml` — deployment configuration
+- `hostinfo.txt`, `mounts.txt`, `runtime_info.txt`, `kernel.txt` — captured host facts kept for support
+- `vendor/`, `skills/` — vendored material
